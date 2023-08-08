@@ -3,9 +3,9 @@ function Submit_01(){
 
     // BÀI TẬP VỀ NHÀ 01 - TÍNH TIỀN LƯƠNG NHÂN VIÊN
     // B1: Xác định đầu vào
-    // - luongMotNgay: Lương 1 ngày
+    // - luongMotNgay: Lương 1 ngày (100.000)
     // - soNgayLam: Số ngày làm
-    var luongMotNgay = +document.getElementById('luongMotNgay').value;
+    var luongMotNgay = 100000;
     var soNgayLam = +document.getElementById('soNgayLam').value;
     
     var tongTienLuong;
@@ -59,7 +59,7 @@ function Submit_02(){
 
 function Submit_03(){
     // B1: Xác định đầu vào
-    // - TI_GIA_USD
+    // - TI_GIA_USD (23.500)
     // - soTienDolar
     const TI_GIA_USD = 23500;
     var soTienDolar = +document.getElementById('soTienDolar').value;
