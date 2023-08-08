@@ -3,22 +3,21 @@ function Submit_01(){
 
     // BÀI TẬP VỀ NHÀ 01 - TÍNH TIỀN LƯƠNG NHÂN VIÊN
     // B1: Xác định đầu vào
-    // - luongNgay: Lương 1 ngày = 100.000đ
-    // - soNgay: Số ngày làm
+    // - luongMotNgay: Lương 1 ngày
+    // - soNgayLam: Số ngày làm
     var luongMotNgay = +document.getElementById('luongMotNgay').value;
     var soNgayLam = +document.getElementById('soNgayLam').value;
     
     var tongTienLuong;
 
     // B2: Công thức tính lương
-    // - luong = luongNgay*soNgay
+    // - tongTienLuong = luongMotNgay*soNgayLam
     tongTienLuong = luongMotNgay*soNgayLam;
 
-    console.log(tongTienLuong);
     // B3: In kết quả đầu ra
     document.getElementById('result_01').innerHTML = `
     <div class ="result">
-    <span>Tiền lương của</span> ${soNgayLam} <span>ngày làm việc là:</span> <b>${tongTienLuong}</b><span>đ</span>
+    <span>Tiền lương của</span> ${soNgayLam} <span>ngày làm việc là:</span> <b>${tongTienLuong}<span>đ</span></b>
     </div>
     `
 };
@@ -111,7 +110,7 @@ function Submit_04(){
 function Submit_05(){
 
     // B1: Xác định đầu vào
-    // - soA
+    // - so
     var soA = +document.getElementById('soA').value;
     var tongKySoA
 

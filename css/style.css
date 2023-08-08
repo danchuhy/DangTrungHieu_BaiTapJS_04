@@ -15,7 +15,12 @@ body{
 .tab-pane{
     background-color: white;
     padding: 32px;
-    border-radius: 16px;
+    border-radius: 0 0 16px 16px;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+
+
 }
 h1{
     font-size: 32px;
