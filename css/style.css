@@ -4,8 +4,6 @@ body{
 .container{
     width: 480px;
 }
-.nav{
-}
 .nav-pills .nav-link{
     padding: 12px;
 }
@@ -44,4 +42,7 @@ h1{
     
     background-color: #f5f4f4;
     border-radius: 16px;
+}
+.error{
+    color: red;
 }

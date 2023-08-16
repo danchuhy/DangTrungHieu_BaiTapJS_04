@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Bài tập JS-02 - Trung Hiếu</title>
+    <title>Bài tập JS-04 - Trung Hiếu</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,7 +12,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- MY JS -->
+    <!-- MY CSS -->
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
@@ -24,7 +24,6 @@
           <button class="nav-link" id="v-pills-bai02-tab" data-toggle="pill" data-target="#v-pills-bai02" type="button" role="tab" aria-controls="v-pills-bai02" aria-selected="false">Bài 2</button>
           <button class="nav-link" id="v-pills-bai03-tab" data-toggle="pill" data-target="#v-pills-bai03" type="button" role="tab" aria-controls="v-pills-bai03" aria-selected="false">Bài 3</button>
           <button class="nav-link" id="v-pills-bai04-tab" data-toggle="pill" data-target="#v-pills-bai04" type="button" role="tab" aria-controls="v-pills-bai04" aria-selected="false">Bài 4</button>
-          <button class="nav-link" id="v-pills-bai05-tab" data-toggle="pill" data-target="#v-pills-bai05" type="button" role="tab" aria-controls="v-pills-bai05" aria-selected="false">Bài 5</button>
         </div>
 
       <div>
@@ -34,16 +33,24 @@
           <div class="tab-pane fade show active" id="v-pills-bai01" role="tabpanel" aria-labelledby="v-pills-bai01-tab">
   
             <div class="form">
-              <h1>Tính tiền lương nhân viên</h1>
-          
-              <P>Lương một ngày: 100.000đ</P>
-          
+              <h1>Tìm ngày ngày trước đó và ngày tiếp theo</h1>
+                    
               <div class="form-group">
-                <label for="">Số ngày làm</label>
-                <input type="text" name="" id="soNgayLam" class="form-control" placeholder="" >
+                <label for="">Ngày</label>
+                <input type="text" name="" id="ngay" class="form-control" placeholder="" >
               </div>
-          
-              <button onclick="Submit_01()" style = "width:100%" class="btn btn-primary">Tính</button>
+              
+              <div class="form-group">
+                <label for="">Tháng</label>
+                <input type="text" name="" id="thang" class="form-control" placeholder="" >
+              </div>
+
+              <div class="form-group">
+                <label for="">Năm</label>
+                <input type="text" name="" id="nam" class="form-control" placeholder="" >
+              </div>
+
+              <button onclick="Submit_01()" style = "width:100%" class="btn btn-primary">Tìm</button>
           
               <div class="resultContainer" id="result_01"></div>
           
@@ -55,31 +62,16 @@
           <div class="tab-pane fade" id="v-pills-bai02" role="tabpanel" aria-labelledby="v-pills-bai02-tab">
 
             <div class="form">
-              <h1>Tính giá trị trung bình</h1>
+              <h1>Tính số ngày có trong tháng</h1>
           
               <div class="form-group">
-                <label for="">Số thứ nhất</label>
-                <input type="text" name="" id="so1" class="form-control" placeholder=""> 
+                <label for="">Tháng</label>
+                <input type="text" name="" id="thangA" class="form-control" placeholder=""> 
               </div>
           
               <div class="form-group">
-                <label for="">Số thứ hai</label>
-                <input type="text" name="" id="so2" class="form-control" placeholder=""> 
-              </div>
-
-              <div class="form-group">
-                <label for="">Số thứ ba</label>
-                <input type="text" name="" id="so3" class="form-control" placeholder=""> 
-              </div>
-
-              <div class="form-group">
-                <label for="">Số thứ tư</label>
-                <input type="text" name="" id="so4" class="form-control" placeholder=""> 
-              </div>
-
-              <div class="form-group">
-                <label for="">Số thứ năm</label>
-                <input type="text" name="" id="so5" class="form-control" placeholder=""> 
+                <label for="">Năm</label>
+                <input type="text" name="" id="namA" class="form-control" placeholder=""> 
               </div>
           
               <button onclick="Submit_02()" style = "width:100%" class="btn btn-primary">Tính</button>
@@ -95,16 +87,14 @@
 
             <div class="form">
               
-              <h1>Quy đổi tiền sang VND </h1>
-
-              <P>Tỉ giá dollar: $1 = 23.500đ</P>
-          
+              <h1>In cách đọc số nguyên có 3 chữ số </h1>
+              
               <div class="form-group">
-                <label for="">Số tiền dolar</label>
-                <input type="text" name="" id="soTienDolar" class="form-control" placeholder=""> 
+                <label for="">Số có 3 chữ số</label>
+                <input type="text" name="" id="so" class="form-control" placeholder=""> 
               </div>
-                    
-              <button onclick="Submit_03()" style = "width:100%" class="btn btn-primary">Quy đổi</button>
+              
+              <button onclick="Submit_03()" style = "width:100%" class="btn btn-primary">In</button>
           
               <div class="resultContainer" id="result_03"></div>
           
@@ -118,17 +108,85 @@
 
             <div class="form">
               
-              <h1>Tính chu vi & diện tích hình chữ nhật</h1>
+              <h1>Tìm sinh viên xa trường nhất</h1>
           
+              <h4>Sinh viên 1</h4>
+
               <div class="form-group">
-                <label for="">Chiều dài</label>
-                <input type="text" name="" id="chieuDai" class="form-control" placeholder=""> 
+                <label for="">Tên</label>
+                <input type="text" name="" id="sv1Ten" class="form-control" placeholder=""> 
               </div>
 
               <div class="form-group">
-                <label for="">Chiều rộng</label>
-                <input type="text" name="" id="chieuRong" class="form-control" placeholder=""> 
+                <div class="row">
+                  <div class="col-6">
+                    <label for="sv1X">Toạ độ X</label>
+                    <input type="text" name="sv1X" id="sv1X" class="form-control" placeholder="" >
+                  </div>
+                  <div class="col-6">
+                    <label for="sv1X">Toạ độ Y</label>
+                    <input type="text" name="sv1Y" id="sv1Y" class="form-control" placeholder="" >
+                  </div>
+                </div>
               </div>
+              <br>
+
+              <h4>Sinh viên 2</h4>
+
+              <div class="form-group">
+                <label for="">Tên</label>
+                <input type="text" name="" id="sv2Ten" class="form-control" placeholder=""> 
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-6">
+                    <label for="sv2X">Toạ độ X</label>
+                    <input type="text" name="sv2X" id="sv2X" class="form-control" placeholder="" >
+                  </div>
+                  <div class="col-6">
+                    <label for="sv2Y">Toạ độ Y</label>
+                    <input type="text" name="sv2Y" id="sv2Y" class="form-control" placeholder="" >
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <h4>Sinh viên 3</h4>
+
+              <div class="form-group">
+                <label for="">Tên</label>
+                <input type="text" name="" id="sv3Ten" class="form-control" placeholder=""> 
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-6">
+                    <label for="sv3X">Toạ độ X</label>
+                    <input type="text" name="sv3X" id="sv3X" class="form-control" placeholder="" >
+                  </div>
+                  <div class="col-6">
+                    <label for="sv3Y">Toạ độ Y</label>
+                    <input type="text" name="sv3Y" id="sv3Y" class="form-control" placeholder="" >
+                  </div>
+                </div>
+              </div>
+              <br>
+              
+              <h4>Toạ độ của trường học</h4>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-6">
+                    <label for="truongX">Toạ độ X</label>
+                    <input type="text" name="truongX" id="truongX" class="form-control" placeholder="" >
+                  </div>
+                  <div class="col-6">
+                    <label for="truongY">Toạ độ Y</label>
+                    <input type="text" name="truongY" id="truongY" class="form-control" placeholder="" >
+                  </div>
+                </div>
+              </div>
+
                     
               <button onclick="Submit_04()" style = "width:100%" class="btn btn-primary">Tính</button>
           
@@ -137,31 +195,6 @@
             </div>
 
           </div>
-
-
-          <!-- BÀI 5 -->
-          <div class="tab-pane fade" id="v-pills-bai05" role="tabpanel" aria-labelledby="v-pills-bai05-tab">
-
-            <div class="form">
-              
-              <h1>Tính tổng hai ký số</h1>
-          
-              <div class="form-group">
-                <label for="">Một số có hai chữ số</label>
-                <input type="text" name="" id="soA" class="form-control" placeholder=""> 
-              </div>
-                    
-              <button onclick="Submit_05()" style = "width:100%" class="btn btn-primary">Tính</button>
-          
-              <div class="resultContainer" id="result_05">
-                
-              </div>
-          
-            </div>
-
-          </div>
-
-
         </div>
       </div>
     </div>
